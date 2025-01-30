@@ -1,0 +1,299 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #f39c12);
+    color: #ecf0f1;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #e74c3c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Section Présentation */
+.presentation {
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.presentation h2 {
+    font-size: 3rem;
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section Carousel */
+.carousel-section {
+    margin-bottom: 50px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    animation: zoomIn 2s ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    border-radius: 15px;
+}
+
+/* Section Appels à l'Action */
+.cta {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.cta h3 {
+    font-size: 3rem;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta .btn {
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Section Informations */
+.info-section {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Un bleu plus sombre pour correspondre au thème F1 */
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.info-section h3 {
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #ecf0f1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Ombre du texte pour effet F1 */
+}
+
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #34495e;  /* Un gris-bleu qui s'intègre bien dans le thème de la F1 */
+    border: 1px solid #e74c3c;
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-15px);  /* Élément qui monte lorsqu'on survole */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);  /* Ombre plus forte sur le survol */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;  /* Rouge qui correspond à l'accent de la F1 */
+}
+
+.card p {
+    font-size: 1rem;
+    color: #bdc3c7;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.contact-button {
+    margin-top: 40px;
+}
+
+.contact-button .btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button .btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);  /* Animation de grossissement sur hover */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid #e74c3c;
+}
+
+footer p {
+    color: #95a5a6;
+    font-size: 14px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

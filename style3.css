@@ -1,0 +1,364 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #f39c12); /* Dégradé de noir à jaune orangé */
+    color: #ecf0f1;
+    overflow-x: hidden;
+    font-size: 16px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e74c3c; /* Rouge pour le titre */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: slideIn 1s ease-out;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+/* Effet de surbrillance pour les liens */
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #e74c3c;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Section des événements */
+.events-section {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    max-width: 1000px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.events-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cartes des événements */
+.event-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.event-card h3 {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.event-card .event-info {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.event-card .event-info strong {
+    color: #ecf0f1;
+}
+
+.event-card .event-description {
+    font-size: 1rem;
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.event-card .event-footer {
+    text-align: center;
+}
+
+/* Style du bouton "Supprimer" */
+.delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #c0392b;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e74c3c;
+}
+
+/* Section des commentaires */
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.comments-section h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.comment {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.comment strong {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.comment p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+.comment form {
+    display: inline;
+}
+
+/* Zone de texte des commentaires */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #34495e;
+    color: white;
+}
+
+textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+/* Bouton de soumission de commentaire */
+button[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Pied de page */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid #e74c3c;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer p {
+    color: #95a5a6;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .events-section {
+        padding: 20px;
+    }
+
+    .event-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .event-card .event-info {
+        font-size: 1rem;
+    }
+
+    .event-card .event-description {
+        font-size: 0.9rem;
+    }
+
+    .comments-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .comment {
+        padding: 10px;
+    }
+
+    textarea {
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+
+    .delete-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .events-section {
+        padding: 15px;
+    }
+
+    .event-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .event-card .event-info {
+        font-size: 0.9rem;
+    }
+
+    .event-card .event-description {
+        font-size: 0.85rem;
+    }
+
+    .comments-section h4 {
+        font-size: 1.3rem;
+    }
+
+    .comment {
+        padding: 8px;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+    }
+
+    .delete-button {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <title>Carnet d'adresses</title>
+	</head>
+	<body>
+        <h1>Carnet d'adresses</h1>
+		<?php
+		$mysqli = new mysqli("http://localhost/phpmyadmin/index.php?route=/", "root", "", "");
+		$mysqli->set_charset("utf8");
+		$requete = "SELECT * FROM carnet";
+		}
+		$mysqli->close();
+		?>
+	</body> 
+</html>
