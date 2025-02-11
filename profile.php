@@ -41,7 +41,6 @@ $events = $eventStmt->fetchAll();
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="create_event.php">Créer un événement</a></li>
                 <li><a href="events.php">Événements</a></li>
                 <li><a href="chat.php">chat</a></li>
                 <li><a href="profile.php">Mon Profil</a></li>
@@ -54,7 +53,21 @@ $events = $eventStmt->fetchAll();
         <h2>Votre profil</h2>
         <p><strong>Nom d'utilisateur :</strong> <?php echo htmlspecialchars($user['username']); ?></p>
         <p><strong>Email :</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+ 
+ <!-- Affichage de la photo de profil -->
+<div class="profile-picture">
+    <img src="<?php echo $user['profile_picture'] ? htmlspecialchars($user['profile_picture']) : 'default-avatar.png'; ?>" 
+         alt="Photo de profil" width="150" height="150">
+</div>
 
+<!-- Formulaire d'upload de photo de profil -->
+<form action="upload_profile_picture.php" method="POST" enctype="multipart/form-data">
+    <label for="profile_picture">Changer la photo de profil :</label>
+    <input type="file" name="profile_picture" id="profile_picture" accept="image/*" required>
+    <button type="submit">Mettre à jour</button>
+</form>
+
+ 
         <div class="event-history">
             <h3>Historique de vos événements</h3>
             <?php if (count($events) > 0): ?>
